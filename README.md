@@ -1203,12 +1203,11 @@ Your `README.md` must include:
 
 | Criteria | Points |
 |----------|--------|
-| Project setup correct (dependencies, Vitest config, TypeScript) | 15 |
-| Core components implemented (atoms, molecules, organisms) | 20 |
-| Design tokens implemented and used consistently | 15 |
-| Student-added components (Badge, AlertWithAction with tests) | 20 |
+| Design tokens implemented correctly (colors, spacing, typography) | 15 |
+| Core components implemented (Icon, Text, Button, Alert, NotificationCenter) | 25 |
+| Student-added components (Badge atom, AlertWithAction molecule with tests) | 25 |
 | README complete with reflection (200+ words) and key concepts | 20 |
-| Code quality (90%+ coverage, clean code, proper TypeScript) | 10 |
+| Code quality and test coverage (90%+, clean code, proper TypeScript) | 15 |
 | **Total** | **100** |
 
 ---
