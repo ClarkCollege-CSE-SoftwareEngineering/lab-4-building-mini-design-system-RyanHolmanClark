@@ -1,3 +1,12 @@
+**Name/Date** Ryan Holman February 2nd 2026
+
+**Reflection Section** Building the Alert molecule from the Icon, Button, and Text atoms simplifies the construction and readability of `Alert.tsx`. Building Alert and other molecules from the same atom will also make the design between them more consistent and it will be easier to apply changes that need to be made across the application. The tokens allow us to predefine things like colors, font, size and spacing, to make all of these things consistent across the application. To add a dark mode the first thing you would need is a second set of colors in `colors.ts` token for when dark mode is applied. The second part will be adding a dark mode boolean parameter that could default to false. The third part would be in each atom when a color is selected from `colors.ts` to check if dark mode is enabled and if so make the corresponding selection from the dark mode variant in `colors.ts`.
+
+**Key concepts** 
+- How to organize a project into Atoms/Molecules/Organisms/ to improve consistency and decrease refactor time
+- How to think past outdated notion that the internet is made of of pages
+- The usefulness of style guides for creating consistent work among a group of contributors to a project
+
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/oRCZ8LbN)
 # Lab 4: Building a Mini Design System
 
@@ -92,6 +101,8 @@ Take a few minutes to read through the token files and the Icon/Text components 
 ✅ **Checkpoint:** Run `npm run typecheck` — it should complete with no errors.
 
 🤔 **Reflection Question:** Look at `src/tokens/colors.ts`. How does organizing colors by semantic meaning (success, warning, error, info) differ from organizing them by visual property (green, yellow, red, blue)? What advantages does the semantic approach offer?
+
+By giving each group of colors a semantic meaning you are alow implying when and how they should be used. By only organizing by visual property different team members on the same project my accidentally use the groups of colors in different meaning, by defining the meaning you different people will have a more similar understanding of their use. 
 
 ---
 
@@ -283,6 +294,8 @@ describe('Button', () => {
 ✅ **Checkpoint:** Run `npm test` — your Button tests should pass.
 
 🤔 **Reflection Question:** Notice how the Button component uses `spacing.xs`, `spacing.sm`, etc. instead of hardcoded values like `'4px'`, `'8px'`. What would you need to change if your design team decided to increase all spacing by 2px?
+
+If all atoms, molecules and organisms are built using the spacing provided in `spacing.ts`, then changing the spacing on the entire application would be as simple as changing the values set in spacing.ts 
 
 ---
 
@@ -485,6 +498,8 @@ describe('Alert', () => {
 ✅ **Checkpoint:** Run `npm run test:coverage` — you should have at least 90% coverage.
 
 🤔 **Reflection Question:** The Alert molecule imports and uses Icon, Text, and Button atoms. If you needed to update how all buttons look across your entire application, how many files would you need to change? How does this demonstrate Frost's point about the value of atomic design?
+
+To change the look of buttons across the entire application you would only need to change `Button.tsx` atom. This add to the fluidity of the application making it much simpler to keep the look and feel of all element the consistent across the application.
 
 ---
 
